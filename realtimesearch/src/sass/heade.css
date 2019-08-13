@@ -1,0 +1,31 @@
+.headr {
+    display: block;
+    width: 600px;
+    height: 240px;
+    border: 0.5px solid rgb(34, 21, 21);
+    background-color: rgba(250, 156, 15, 0.774);
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.headr>h1 {
+    color: rgb(243, 226, 74);
+    font-family: Audrey-normal;
+    font-weight: 600;
+    font-size: 2.4em;
+    text-shadow: 3px 4px 5px black;
+    text-align: center;
+
+}
+
+.headr>p {
+    font-size: 22px;
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 100%;
+    height: auto;
+    text-align: left
+}
