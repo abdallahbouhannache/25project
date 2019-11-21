@@ -1,0 +1,150 @@
+.wrphead {
+    background: rgba(29, 17, 3, 0.829);
+    height: 60px;
+    position: static;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav>h1 {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+}
+
+.authlinks {
+    display: inline-block;
+    align-self: center;
+    width: auto;
+    padding: 10px;
+}
+
+a.link {
+    color: #FFF;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+
+.btn.dropdown-toggle {
+    background: rgba(48, 56, 80, 0);
+    color: #FFF;
+}
+
+/* .btn.dropdown-toggle:focus {
+    border: 0px;
+}
+ */
+
+
+
+
+
+
+#dropdownmenu {
+
+    transform: translateY(48px) !important;
+
+}
+
+.dropdown-menu {
+    background: rgba(29, 17, 3, 0.829);
+
+}
+
+
+.dropdown-menu>.dropdown-item {
+    color: #FFF;
+}
+
+.dropdown-menu>.dropdown-item:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ** */

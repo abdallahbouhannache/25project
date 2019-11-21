@@ -1,0 +1,16 @@
+.footersection {
+    position: relative;
+    top: 100%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: rgba(41, 40, 40, 0.877);
+    height: 60px;
+
+}
+
+.footersection>a {
+    color: #FFF;
+    align-self: center;
+    text-transform: capitalize;
+}

@@ -1,0 +1,66 @@
+.searchwrpper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    position: relative;
+    top: 150px;
+}
+
+input[type="text"] {
+    width: 300px;
+    margin: 0;
+    /* background: white url('../srhicon.svg') right no-repeat;
+    padding-left: 17px; */
+}
+
+input[type="submit"] {
+    background: rgba(207, 207, 207, 0.247);
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 0 15px;
+    margin: 0 40px;
+    display: inline-block;
+    width: auto;
+    border: 1px solid #000;
+}
+
+input[type="submit"]:hover {
+    border: 1px solid rgb(4, 19, 235);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ** */
