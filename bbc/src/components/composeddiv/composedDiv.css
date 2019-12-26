@@ -1,0 +1,22 @@
+.composed {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(170px, 1fr)); */
+  /* align-self: flex-end; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  /* min-height: 890px; */
+  height: 100%;
+  margin: 0;
+  /* border: 4px solid red; */
+  flex: 2;
+}
+.sectionHeading {
+  /* display: none; */
+}
+
+.ComDiv.Flex {
+}
+.ComDiv.Grid {
+}
