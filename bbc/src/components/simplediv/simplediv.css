@@ -1,56 +1,99 @@
-/*-------------------- THE SimpleDiv SELECTOR SECTION -------------------- */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+}
 
+/*-------------------- THE SimpleDiv SELECTOR SECTION -------------------- */
 .SimpleDiv {
-  /* border: 1px solid rgb(0, 0, 0); */
   display: block;
-  width: auto;
-  max-width: 1250px;
-  height: auto;
+  width: 100%;
+  align-self: center;
   padding: 0 0 0 0;
+  height: auto;
   margin: auto;
+  /* background-color: var(--section-bg-color); */
+  /* border: 2px solid rgb(0, 0, 0); */
+  /* max-width: 1250px; */
+  /* border: 1px solid red; */
   /* max-width: 100%; */
 }
 
 .SimpleDiv.Grid {
-  /* display: block;
-  width: 1250px; */
-  flex: 1;
+  /* width: 1250px; */
+  /* flex: 1; */
+  display: flex;
   margin: 30px 0 0 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid red; */
 }
+
+.SimpleDiv.Grid>.sectionHeading {
+  /* border: 2px solid rgb(5, 189, 67); */
+  width: 100%;
+  /* align-self: center; */
+  margin: 20px 0 0 0;
+}
+
 .SimpleDiv.Flex {
   margin: 30px 0;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.SimpleDiv.Flex>.sectionHeading {
+  /* border: 2px solid rgb(5, 189, 67); */
+  align-self: center;
+  width: 100%;
+  padding: 0 110px;
+  margin: 20px 0 0 0;
+}
+
+.SimpleDiv.Flex img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .SimpleDiv.FlexCompo {
-  /* border: 2px solid rgb(255, 88, 11); */
   height: auto;
   width: auto;
   align-self: flex-start;
   margin: 0;
   padding: 0;
 }
+
 .SimpleDiv.GridCompo {
   display: inline-block;
   width: auto;
-  /* min-height: 900px; */
-  height: auto;
-  margin-right: 20px;
-  /* border: 5px solid rgb(11, 255, 161); */
-  /* margin: 0 20px 0 0; */
-}
-/*-------------------- THE End SimpleDiv SELECTOR SECTION -------------------- */
-/*-------------------- THE sectionContainer SELECTOR SECTION -------------------- */
-.sectionContainer {
-  position: relative;
-  /* background: var(--section-bg-color); */
-  /* background-image: url("./rom.jpg"); */
-  /* border: 1px solid yellow; */
+  margin: 0 20px 0 0;
+  /* margin-right: 20px; */
   /* height: auto;
-  width: auto; */
+   */
+
+  /* min-height: 900px; */
+  /* margin: 0 20px 0 0; */
 }
 
 /*-------------------- THE End SimpleDiv SELECTOR SECTION -------------------- */
+
+/*-------------------- THE sectionContainer SELECTOR SECTION -------------------- */
+.sectionContainer {
+  position: relative;
+  width: auto;
+  /* border: 2px solid red; */
+  /* background: var(--section-bg-color); */
+  /* background-image: url("./rom.jpg"); */
+
+  /* height: auto;
+  width: auto; */
+  max-width: 1250px;
+  align-self: center;
+}
 
 .sectionContainer.GridSimple,
 .sectionContainer.Grid {
@@ -59,11 +102,23 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, max-content);
   grid-template-rows: 170px 170px;
-  width: 100%;
+  width: auto;
+  max-width: 1250px;
   height: auto;
   padding: 2px;
-  margin: 0 0;
+  margin: 0 0 30px 0;
   grid-gap: 1rem;
+}
+
+.sectionContainer.FlexSimple,
+.sectionContainer.Flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin: 0 0 30px 0;
+  padding: 0 100px;
 }
 
 .sectionContainer.GridCompo {
@@ -76,18 +131,6 @@
   padding: 0;
   margin: 0 0;
   grid-gap: 1rem;
-  /* border: 1px solid red; */
-}
-
-.sectionContainer.FlexSimple,
-.sectionContainer.Flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0 100px;
 }
 
 .sectionContainer.FlexCompo {
@@ -98,55 +141,14 @@
   /* max-width: 600px; */
   height: auto;
   padding: 0;
-  /* border: 1px solid red; */
+
   margin: 0;
 }
 
-.news {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  position: relative;
-  color: #000;
-  text-shadow: #fff;
-  z-index: 10;
-  text-transform: capitalize;
-  text-decoration: none;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-}
+/*-------------------- THE End sectionContainer SELECTOR SECTION -------------------- */
 
-.news.GridCompo.new0 {
-  grid-column: 1/4;
-  grid-row: 1 / 2;
-}
+/*-------------------- THE  FlexSImple SELECTOR  SECTION -------------------- */
 
-.news.GridCompo.new1 {
-  grid-column: 1/ 2;
-  grid-row: 3/5;
-}
-
-.news.GridCompo.new2 {
-  grid-column: 2/3;
-  grid-row: 3/5;
-}
-
-.news.GridCompo.new3 {
-  grid-column: 3/ 4;
-  grid-row: 3/5;
-}
-
-/* .upGrid {
-  width: 300px;
-  height: 300px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-} */
 .news.FlexSimple,
 .news.Flex {
   min-height: 320px;
@@ -156,52 +158,37 @@
   padding: 0;
 }
 
-.news.FlexCompo {
-  margin: 0;
-  padding: 0;
-  height: 140px;
-  /* border: 2px solid green; */
-}
-
-/* ------------- */
-.news.Grid,
-.news.GridCompo {
-  height: 100%;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-
-  /* border: 2px solid rgb(13, 199, 13); */
-}
-
-.news.GridCompo.GCD.news0 {
-}
-.GCD {
-  /* border: 2px solid red; */
-  height: 100%;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.news.GridCompo.GCD > img {
+.news.FlexSimple>img,
+/*    ---------------------//////                  ALTERNATED  */
+.news.Flex>img {
   /* display: block; */
-  /* pointer-events: none; */
-  /* border: 5px solid rgb(17, 0, 255); */
-  position: relative;
   margin: 0;
   padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 67%;
+  z-index: -1;
+}
+
+.news.Flex .desc>* {
+  color: rgb(0, 0, 0);
+}
+
+/*-------------------- THE end  FlexSImple SELECTOR  SECTION -------------------- */
+
+/*-------------------- THE   GridSImple SELECTOR  SECTION -------------------- */
+.news.Grid>img,
+.news.GridSimple>img {
+  /* display: block; */
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
-
-/* ------------- */
 
 .news.Grid.new0 {
   grid-column: 1/3;
@@ -228,19 +215,64 @@
   grid-row: 2 / 3;
 }
 
-.news.FlexSimple > img,   /*    ---------------------//////                  ALTERNATED  */
-.news.Flex > img {
-  /* display: block; */
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 67%;
-  z-index: -1;
+.news.Grid.new0 .desc {}
+
+.news.Grid.new0 .desc>p {
+  font-size: 0.8rem;
 }
 
-.news.FlexCompo > img {
+.news.Grid.new0 .desc>a {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.sectionHeading.Grid {
+  /* background: rgb(61, 180, 13); */
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  height: 30px;
+  width: 100%;
+  /* position: absolute; */
+  /* max-width: 1250px; */
+}
+
+/*-------------------- THE end  GridSImple SELECTOR  SECTION -------------------- */
+
+/*-------------------- THE   GridCompo SELECTOR  SECTION -------------------- */
+
+.news.GridCompo.new0 {
+  grid-column: 1/4;
+  grid-row: 1 / 2;
+}
+
+.news.GridCompo.new1 {
+  grid-column: 1/ 2;
+  grid-row: 3/5;
+}
+
+.news.GridCompo.new2 {
+  grid-column: 2/3;
+  grid-row: 3/5;
+}
+
+.news.GridCompo.new3 {
+  grid-column: 3/ 4;
+  grid-row: 3/5;
+}
+
+.news.Grid,
+.news.GridCompo {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.news.GridCompo>img {
   /* display: block; */
   margin: 0;
   padding: 0;
@@ -251,20 +283,22 @@
   z-index: -1;
 }
 
-.news.Grid > img,
-.news.GridSimple > img {
+.news.GridCompo.GCD>img {
   /* display: block; */
+  /* pointer-events: none; */
+
+  position: relative;
   margin: 0;
   padding: 0;
-  pointer-events: none;
-  position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* border: 4px solid green; */
 }
 
-.news.GridCompo > img {
+/*-------------------- THE end  GridCompo SELECTOR  SECTION -------------------- */
+
+/*-------------------- THE   FlexCompo SELECTOR  SECTION -------------------- */
+.news.FlexCompo>img {
   /* display: block; */
   margin: 0;
   padding: 0;
@@ -273,7 +307,41 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* border: 1px solid green; */
+}
+
+.sectionHeading.FlexCompo {
+  background: red;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.news.FlexCompo {
+  margin: 0;
+  padding: 0;
+  height: 140px;
+}
+
+/*-------------------- THE END  FlexCompo SELECTOR  SECTION -------------------- */
+
+/*-------------------- THE  SHARED  SECTION -------------------- */
+
+.news {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  color: #000;
+  text-shadow: #fff;
+  z-index: 10;
+  text-transform: capitalize;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
 }
 
 .news:hover {
@@ -281,18 +349,13 @@
   text-decoration: none;
 }
 
-/* description inside the picture */
-
-/* when inside a grid section */
-.news.Grid.new0 .desc {
-}
-
-.news.Grid.new0 .desc > p {
-  font-size: 0.8rem;
-}
-.news.Grid.new0 .desc > a {
-  text-transform: uppercase;
-  font-size: 1rem;
+.GCD {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .desc a:hover {
@@ -301,10 +364,10 @@
 
 /* standard version */
 
-.news.Grid > .desc,
-.news.Flex > .desc,
-.news.FlexCompo > .desc,
-.news.GridCompo > .desc {
+.news.Grid>.desc,
+.news.Flex>.desc,
+.news.FlexCompo>.desc,
+.news.GridCompo>.desc {
   position: relative;
   top: calc(100% - 100px);
   left: 2%;
@@ -317,37 +380,24 @@
   padding: 0;
 }
 
-.desc > * {
+.desc>* {
   margin: 0;
   padding: 0;
   color: rgb(255, 255, 255);
   overflow: hidden;
   text-overflow: clip;
 }
-.desc > h3 {
+
+.desc>h3 {
   font-size: 1.5rem;
   font-weight: 580;
 }
-.desc > p {
+
+.desc>p {
   font-size: 10px;
   margin: 5px 0;
 }
 
-/* in flex */
-.news.Flex .desc > * {
-  color: rgb(0, 0, 0);
-}
-
-/* .news > a,
-h2,
-p {
-  z-index: 12;
-  color: red;
-  position: relative;
-  top: 55%;
-} */
-
-/* here require fixing the framing of SimpleDiv container with heading & sectionContainer  */
 .sectionHeading {
   /* position: relative; */
   /* left: 20px; */
@@ -356,25 +406,20 @@ p {
   margin: 0 0 0 0;
   padding: 0 0;
   width: 100%;
-  /* border: 1px solid red; */
-}
-.sectionHeading.FlexCompo {
-  background: red;
-  font-weight: 600;
-  color: #fff;
-  text-transform: capitalize;
-}
-.sectionHeading.GridCompo {
+  max-width: 1250px;
 }
 
-.tag {
-}
+.tag {}
 
 .tag::before {
   color: red;
   content: "|";
   padding: 0 5px;
 }
+
+/*-------------------- THE  END SHARED  SECTION -------------------- */
+
+/*-------------------- THE  MEDIA RESPONSIVNESS  SECTION -------------------- */
 
 /*
 @media only screen and (max-width: 800px) {
@@ -383,7 +428,7 @@ p {
     grid-template-rows: 170px 170px; 
 
     grid-auto-rows: 170px;
-    /* border: 1px solid rgb(24, 193, 202); 
+    
     margin: 0 0px;
   }
 

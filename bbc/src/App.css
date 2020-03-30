@@ -1,15 +1,18 @@
 ﻿:root {
-  --section-bg-color: #f3f3ee;
+  --page-bg: #F6F6F6;
+  --section-bg-color: #FFFFFF;
   --section-bgtypeone-color: #f3f3ee;
   --hoverC: red;
   /* border: 5px solid red; */
   height: 100%;
 }
+
 #root {
   /* border: 5px solid rgb(38, 6, 177); */
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--page-bg);
 }
 
 html {
@@ -33,7 +36,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 160px; /* Set the fixed height of the footer here */
+  height: 160px;
+  /* Set the fixed height of the footer here */
 }
 
 .App {
@@ -43,6 +47,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
+
 }
 
 /* Override Bootstrap Styling */

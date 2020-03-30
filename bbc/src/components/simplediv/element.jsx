@@ -9,7 +9,8 @@ function Element(props) {
     title: "topictitle",
     desc:
       "EU commission President Ursula von der Leyen warns talks with the uk may face another 'cliff edge'",
-    imgsrc: "./rom.jpg",
+    imgContent: "./rom.jpg",
+    elBg: "",
     classN: "",
     id: 0,
     updated: false,
@@ -29,14 +30,20 @@ function Element(props) {
     let cls = props.classN + " new" + state.id;
     setState({
       ...state,
-      classN: cls
+      classN: cls,
+      imgContent: props.state.element.imgCont,
+      elBg: props.state.element.bgcolor || props.state.element.bgEle
     });
-  }, [props.state.classElement]);
+  }, [props.state]);
 
   return (
     <React.Fragment>
-      <Link className={`${state.classN}`} to="/">
-        <img src={require(`${state.imgsrc}`)} alt="" />
+      <Link
+        style={{ background: `url(${state.elBg})` }}
+        className={`${state.classN}`}
+        to="/"
+      >
+        <img src={require(`${state.imgContent}`)} alt="" />
         <div className={props.state.descGrid}>
           <h3>{state.title}</h3>
           <p>{state.desc}</p>

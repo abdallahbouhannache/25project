@@ -108,6 +108,7 @@ class ComposedDiv extends Component {
           dispClss="GridCompo"
           descGrid="GCD" /* GridCompoDesc */
           listObjects={this.state.posts7}
+          // sectionImg="./black.jpg"
         />
 
         {/* simple div FlexTYPE right side bar  section */}
@@ -115,6 +116,7 @@ class ComposedDiv extends Component {
           dispClss="FlexCompo"
           FlexDirec="column"
           descGrid=""
+          // sectionImg="./black.jpg"
           listObjects={this.state.posts2}
         />
       </div>

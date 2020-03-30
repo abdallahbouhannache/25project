@@ -20,6 +20,7 @@ import ComposedDiv from "./components/composeddiv";
 // import Blank4 from "./components/Blank4";
 // import Blank5 from "./components/Blank5";
 import mainApp from "./components/mainApp";
+import Weather from "./components/weather";
 //TODO Web Template Studio: Add routes for your new pages here.
 class App extends Component {
   constructor(props) {
@@ -78,10 +79,23 @@ class App extends Component {
       <React.Fragment>
         <NavBar />
         <div className="App" style={{}}>
-          <SimpleDiv dispClss="Grid" listObjects={this.state.posts2} />
           {/* THIS REQUIRES FINISHING THE WORK ON HERE  */}
-          <SimpleDiv dispClss="Flex" listObjects={this.state.posts} />
-          <SimpleDiv dispClss="Flex" listObjects={this.state.posts} />
+          <SimpleDiv
+            dispClss="Grid"
+            sectionImg="./bg.jpg"
+            listObjects={this.state.posts2}
+          />
+          <SimpleDiv
+            dispClss="Flex"
+            sectionImg=""
+            listObjects={this.state.posts}
+          />
+          <SimpleDiv
+            dispClss="Flex"
+            sectionImg="./bg.jpg"
+            listObjects={this.state.posts}
+          />
+          <Weather />
           <ComposedDiv listObjects={this.state.posts} />
         </div>
         {/*<SimpleDiv />

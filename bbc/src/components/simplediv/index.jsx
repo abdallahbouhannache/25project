@@ -7,9 +7,9 @@ function SimpleDiv(props) {
   const [state, setState] = useState({
     sectionTitle: "sectionTitle",
     sectionProps: {
-      bg: "#F3F3EE",
+      bg: "#fff",
       FlexDirec: "row",
-      imgSrc: "./bg.jpg",
+      imgSrc: "",
       bgtype: "s" /* either S:simple C:composed  */
     },
     timeDate: "Sunday, 15 December",
@@ -17,7 +17,9 @@ function SimpleDiv(props) {
     element: {
       title: "topictitle",
       desc: "justtext",
-      imgsrc: "./bg.jpg"
+      bgEle: "./bg.jpg",
+      imgCont: "./rom.jpg",
+      bgcolor: "#fff"
     },
     DivClass: "",
     headingClss: "",
@@ -59,8 +61,18 @@ function SimpleDiv(props) {
       ...state,
       sectionProps:
         props.dispClss == "Flex"
-          ? { bg: "#fff", FlexDirec: "column", ...state.sectionProps }
-          : { bg: "#f3f3ee", FlexDirec: "column", ...state.sectionProps },
+          ? {
+              bg: "#fff",
+              FlexDirec: "column",
+              imgSrc: props.sectionImg || "",
+              bgtype: "s"
+            }
+          : {
+              bg: "#fff",
+              FlexDirec: "column",
+              imgSrc: props.sectionImg || "",
+              bgtype: "s"
+            },
       DivClass: "SimpleDiv " + props.dispClss,
       headingClss: "sectionHeading " + props.dispClss,
       containerClss: "sectionContainer " + props.dispClss /* == "Flex" */,
@@ -72,8 +84,8 @@ function SimpleDiv(props) {
       descGrid: props.descGrid || "desc"
     });
   }, [props]);
+  // var x = props.sectionImg || "./sky.jpg";
 
-  console.log(state.descGrid);
   if (!state.lCompo) {
     return <React.Fragment>null</React.Fragment>;
   }
@@ -84,22 +96,24 @@ function SimpleDiv(props) {
       </React.Fragment>
     );
   } else {
-    var lcompoLeft = state.lCompo.slice(1);
+    // console.log(state.sectionProps);
     return (
       <div
         className={state.DivClass}
-        // style={{
-        //   background:
-        //     state.sectionProps.imgSrc != ""
-        //       ? `url(${state.sectionProps.imgSrc})`
-        //       : state.sectionProps.bg,
-        //   backgroundSize: "cover"
-        // }}
+        style={{
+          backgroundImage: `url(${state.sectionProps.imgSrc})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat"
+          // backgroundPosition: "center",
+          // backgroundSize: "cover"
+          // backgroundColor: state.sectionProps.bg
+        }}
       >
         <div className={state.headingClss}>
           <span>{state.sectionTitle}</span>
           <span>{state.timeDate}</span>
         </div>
+
         {/* in here we structure the element depending on the number of elements*/}
         <div className={`${state.containerClss}`}>
           {state.lCompo.map((item, index) => (
